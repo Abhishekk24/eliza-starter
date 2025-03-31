@@ -1,10 +1,14 @@
 {
   "name": "Eliza",
   "plugins": [],
-  "clients": [],
-  "modelProvider": "openrouter",
+  "clients": ["telegram" , "discord"],
+  "modelProvider": "openai",
   "settings": {
-    "secrets": {},
+    "secrets": {
+      "TELEGRAM_BOT_TOKEN":"${TELEGRAM_TOKEN}",
+      "DISCORD_APPLICATION_ID" : "${DISCORD_APP_ID}",
+"DISCORD_API_TOKEN" : "${DISCORD_TOKEN}"  
+    },
     "voice": {
       "model": "en_US-hfc_female-medium"
     }
